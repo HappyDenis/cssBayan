@@ -1,1 +1,96 @@
-body {background-color: aquamarine;}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'arial';
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background-color: aquamarine;
+}
+
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.mainMenu{
+    width: 310px;
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.item{
+    border-top: 1px solid black;
+    overflow: hidden;
+}
+.button{
+    display: block;
+    padding: 20px 16px;
+    background-color: #615f5f;
+    color: #fff;
+    position: relative;
+}
+.item:target .subMenu{
+    max-height: 90em;
+}
+img {
+    vertical-align: middle;
+    width: 90%;
+}
+.subMenu{
+    background: #939393;
+    overflow: hidden;
+    transition: max-height 0.7s;
+    max-height: 0;
+}
+.subMenu a{
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    font-size: 14px;
+    border-bottom: 2px solid #394c7f;
+    position: relative;    
+}
+.subMenu a:before{
+    content: '';
+    opacity: 0;
+    transition: opacity 0.2s;
+
+}
+.subMenu a:before{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 6px;
+    left: 0;
+    top:0;
+    opacity: 1;
+    border-top: 24px soli d transpare nt;
+    border-bottom: 24px solid transparent;
+}
+.subMenu a:after{
+    content: '';
+    opacity: 0;
+    transition: opacity 0.8s;
+
+}
+.subMenu a:after{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 6px;
+    right: 0px;
+    top:0;
+    opacity: 1;
+    border-top: 24px solid transparent;
+    border-right: 11px solid aquamarine;
+    border-bottom: 24px solid transparent;
+}
+.subMenu a:hover{ 
+  transition: all 0.2s;
+    border-bottom: 1px solid #394c7f; 
+}
+
+
